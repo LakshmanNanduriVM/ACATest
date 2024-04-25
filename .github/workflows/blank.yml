@@ -28,6 +28,15 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
+      
+      - name: Set up Azure CLI
+        uses: azure/setup-azure-cli@v1
+        
+      - name: Run JavaScript action
+        run: |
+          console.log('Hello from JavaScript!');
+          // Add your JavaScript code here
+          
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
